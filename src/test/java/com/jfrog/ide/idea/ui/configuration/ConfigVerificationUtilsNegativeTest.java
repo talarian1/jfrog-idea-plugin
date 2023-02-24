@@ -30,11 +30,11 @@ public class ConfigVerificationUtilsNegativeTest {
                 {"", ServerConfig.PolicyType.WATCHES, "", ",watch-1,watch-2"},
                 {"", ServerConfig.PolicyType.WATCHES, "", "watch-1,watch-2,"},
                 {"bad pattern *", ServerConfig.PolicyType.WATCHES, "", ""},
-                {"**/*{bad pattern}", ServerConfig.PolicyType.WATCHES, "", ""},
-                {"**/*{bad,pattern*", ServerConfig.PolicyType.VULNERABILITIES, "", ""},
-                {"**/*{bad,pattern}a{b,c}*", ServerConfig.PolicyType.VULNERABILITIES, "", ""},
-                {"**/*{bad,pattern}*a{b,c}*", ServerConfig.PolicyType.VULNERABILITIES, "", ""},
-                {"**/*{{}*", ServerConfig.PolicyType.VULNERABILITIES, "", ""},
+                {"**/*{bad pattern}*", ServerConfig.PolicyType.WATCHES, "", ""},
+                {"**/*{bad,pattern*/**", ServerConfig.PolicyType.VULNERABILITIES, "", ""},
+                {"**/*{bad,pattern}a{b,c}*/**", ServerConfig.PolicyType.VULNERABILITIES, "", ""},
+                {"**/*{bad,pattern}*a{b,c}*/**", ServerConfig.PolicyType.VULNERABILITIES, "", ""},
+                {"**/*{{}**/**", ServerConfig.PolicyType.VULNERABILITIES, "", ""},
         });
     }
 

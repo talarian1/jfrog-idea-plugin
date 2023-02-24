@@ -16,10 +16,10 @@ import static org.apache.commons.lang3.StringUtils.*;
  * @author yahavi
  **/
 public class ConfigVerificationUtils {
-    // Pattern: **/*{a, b, c ...}* OR **/*a*
+    // Pattern: **/*{a, b, c ...}*/** OR **/*a*/**
     public static final String EXCLUSIONS_PREFIX = "**/*";
-    public static final String EXCLUSIONS_SUFFIX = "*";
-    public static String EXCLUSIONS_REGEX_PARSER = "^\\*\\*/\\*\\{([^{}]+)}\\*$";
+    public static final String EXCLUSIONS_SUFFIX = "*/**";
+    public static String EXCLUSIONS_REGEX_PARSER = "^\\*\\*/\\*\\{([^{}]+)}\\*/\\*\\*$";
     public static Pattern EXCLUSIONS_REGEX_PATTERN = Pattern.compile(EXCLUSIONS_REGEX_PARSER);
     public static final String DEFAULT_EXCLUSIONS = EXCLUSIONS_PREFIX + "{.idea, test, node_modules}" + EXCLUSIONS_SUFFIX;
 

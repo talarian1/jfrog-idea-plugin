@@ -24,8 +24,8 @@ public class ConfigVerificationUtilsPositiveTest {
                 {"",ServerConfig.PolicyType.PROJECT, "project", ""},
                 {"",ServerConfig.PolicyType.WATCHES, "project", "watch-1"},
                 {"",ServerConfig.PolicyType.WATCHES, "", "watch-1,watch-2"},
-                {"**/*{.idea, test, node_modules}*",ServerConfig.PolicyType.VULNERABILITIES, "", ""},
-                {"**/*test*",ServerConfig.PolicyType.VULNERABILITIES, "", ""},
+                {"**/*{.idea, test, node_modules}*/**",ServerConfig.PolicyType.VULNERABILITIES, "", ""},
+                {"**/*test*/**",ServerConfig.PolicyType.VULNERABILITIES, "", ""},
 
         });
     }
